@@ -1,6 +1,8 @@
 local f = CreateFrame'Frame'
 f:RegisterEvent'PLAYER_LOGIN'
 f:SetScript('OnEvent', function()
+	if aux_merchant_prices_imported then return end
+	aux_merchant_prices_imported = true
 	aux_merchant_buy = {
 		[16329] = "12000#0",
 		[12251] = "53897#0",
