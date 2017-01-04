@@ -1,0 +1,5 @@
+﻿## Interface: 11200
+## Title: aux merchant prices
+## Notes: aux merchant prices
+## Author: shirsig
+aux_merchant_prices.lua
