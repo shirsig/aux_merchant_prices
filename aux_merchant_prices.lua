@@ -1,8 +1,9 @@
+local VERSION = 1
 local f = CreateFrame'Frame'
 f:RegisterEvent'PLAYER_LOGIN'
 f:SetScript('OnEvent', function()
-	if aux_merchant_prices_imported then return end
-	aux_merchant_prices_imported = true
+	if (tonumber(aux_merchant_prices_imported) or 0) < VERSION then return end
+	aux_merchant_prices_imported = VERSION
 	aux_merchant_buy = {
 		[16329] = "12000#0",
 		[12251] = "53897#0",
