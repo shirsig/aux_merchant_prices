@@ -3,6 +3,7 @@ local f = CreateFrame'Frame'
 f:RegisterEvent'PLAYER_LOGIN'
 f:SetScript('OnEvent', function()
 	if aux_merchant_prices_imported == VERSION then return end
+	aux_tooltip_merchant_sell = true
 	aux_merchant_prices_imported = VERSION
 	aux_merchant_buy = {
 		[7932] = "43309#0",
