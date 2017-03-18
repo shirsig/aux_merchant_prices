@@ -2,7 +2,6 @@ local VERSION = 1
 local f = CreateFrame'Frame'
 f:RegisterEvent'PLAYER_LOGIN'
 f:SetScript('OnEvent', function()
-	aux_tooltip_merchant_sell = true
 	if not aux_merchant_buy or aux_merchant_buy.VERSION ~= VERSION then
 		aux_merchant_buy = {
 			VERSION = VERSION,
