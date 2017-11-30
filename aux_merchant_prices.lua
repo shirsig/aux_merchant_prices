@@ -1,6 +1,6 @@
 local VERSION = 1
 local f = CreateFrame'Frame'
-f:RegisterEvent'PLAYER_LOGIN'
+f:RegisterEvent'VARIABLES_LOADED'
 f:SetScript('OnEvent', function()
 	if not aux_merchant_buy or aux_merchant_buy.VERSION ~= VERSION then
 		aux_merchant_buy = {
