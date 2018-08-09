@@ -1,4 +1,4 @@
-local VERSION = 1
+local VERSION = 2
 local f = CreateFrame'Frame'
 f:RegisterEvent'PLAYER_LOGIN'
 f:SetScript('OnEvent', function()
