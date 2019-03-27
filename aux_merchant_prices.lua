@@ -1,9 +1,11 @@
 local VERSION = 2
 local f = CreateFrame'Frame'
-f:RegisterEvent'VARIABLES_LOADED'
+local aux = require 'aux'
+
+f:RegisterEvent'PLAYER_LOGIN'
 f:SetScript('OnEvent', function()
-	if not aux_merchant_buy or aux_merchant_buy.VERSION ~= VERSION then
-		aux_merchant_buy = {
+	if not aux.account_data.merchant_buy or aux.account_data.merchant_buy.VERSION ~= VERSION then
+        aux.assign(aux.account_data.merchant_buy, {
 			VERSION = VERSION,
 			[7932] = "43309#0",
 			[8124] = "39660#0",
@@ -9664,10 +9666,10 @@ f:SetScript('OnEvent', function()
 			[2380] = "37#0",
 			[2508] = "27#0",
 			[2700] = "400#0",
-		}
+		})
 	end
-	if not aux_merchant_sell or aux_merchant_sell.VERSION ~= VERSION then
-		aux_merchant_sell = {
+	if not aux.account_data.merchant_sell or aux.account_data.merchant_sell ~= VERSION then
+		aux.assign(aux.account_data.merchant_sell, {
 			VERSION = VERSION,
 			[25] = 7,
 			[35] = 9,
@@ -23187,6 +23189,6 @@ f:SetScript('OnEvent', function()
 			[17126] = 0,
 			[17579] = 16936,
 			[16433] = 11691,
-		}
+		})
 	end
 end)
